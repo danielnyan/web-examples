@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> My Seventh Website </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <tier :colour="'red'" :rank="'S'"></tier>
+      <tier :colour="'orange'" :rank="'A'"></tier>
+      <tier :colour="'yellow'" :rank="'B'"></tier>
+      <tier :colour="'green'" :rank="'C'"></tier>
+      <tier :colour="'cyan'" :rank="'D'"></tier>
+      <div style="height:200px; overflow-x:auto">
+        <div id="waifu-container" class="droppable">
+          <waifu @initialize="initialize"></waifu>
+          <waifu @initialize="initialize"></waifu>
+        </div>
+        <div class="rank" @click="addWaifu">+</div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="main.js"></script>
+</html>

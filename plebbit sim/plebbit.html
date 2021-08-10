@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> Plebbit Simulator </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <comment v-for="item in items" :score="item.score" :content="item.content"
+      @increase-score="increaseScore" @decrease-score="decreaseScore"></comment>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="main.js"></script>
+</html>

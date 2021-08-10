@@ -1,0 +1,71 @@
+/* Fixes the size of the image box and centers it, while 
+truncating images that are too tall*/
+#image-box {
+  height: 400px;
+  width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Makes the smaller divs occupy the whole 
+height and makes them stackable horizontally */
+#image-box div {
+  display: inline-block;
+  height: 100%;
+  float: left;
+}
+
+/* Centers text vertically and horizontally 
+using the power of Flex Box, and also sizes 
+the buttons and colours them */
+#image-box .arrows {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 10%;
+  background-color: #dddddd;
+}
+
+/* Makes text within div unselectable */
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The position, top and transform bits 
+are a nice trick to center images. Can 
+also use Flex Box as mentioned above */
+#image-box img {
+  width: 80%;
+  height: auto;
+  display: inline-block;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Make the button do button stuff */
+#image-box .arrows:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+/* Append these at the back. Don't remove anything */
+.button {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: yellow;
+}
