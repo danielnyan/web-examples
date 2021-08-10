@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> Image Gallery </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <p> Current counter = {{counter}} </p>
+      <div v-if="!showAll" id="image-box">
+        <div class="unselectable arrows" @click="decrementCounter"> &lt; </div>
+        <img :src="imageSource">
+        <div class="unselectable arrows" @click="incrementCounter"> &gt; </div>
+      </div>
+      <div v-if="showAll" v-for="image in images" id="image-box">
+        <img :src="image">
+      </div>
+      <div @click="showImages" class="unselectable button" 
+        style="width:20%; margin:auto">
+          <p v-if="!showAll">Show all images</p>
+          <p v-if="showAll">Show gallery view</p>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="main.js"></script>
+</html>
