@@ -1,14 +1,42 @@
-.comment {
-  width: 90%;
-  margin: auto;
-  border: 1px solid black;
+
+/* Buttons */
+.upvote, .downvote, .score {
+  padding:0.5em;
+  text-align: center;
 }
 
-.comment div {
-  display: inline-block;
-  float: left;
-  width: 100%;
+.upvote{
+    background-color: #0000FF;
+    border-radius: 5px;
 }
+
+.downvote{
+    background-color: #DC143C ;
+    border-radius: 5px;
+    
+}
+
+/* Content */
+.content{
+    padding:10px;
+}
+
+/* Overall */
+.comment {
+    display: grid ;
+    grid-template-columns: [side] 5% [main] 95%;
+  
+    width: 70%;
+    margin: auto;
+    margin-top:10px;
+    
+    padding:10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    
+    font-family:arial;
+}
+
 
 .unselectable {
   -webkit-touch-callout: none;
@@ -19,6 +47,5 @@
   user-select: none;
 }
 
-.upvote, .downvote, .score {
-  text-align: center;
-}
+
+
